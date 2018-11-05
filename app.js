@@ -6,7 +6,7 @@ function convert() {
 	if (rom_reg.test(date))
 		res = "Date in decimal numbers:<br>" + RomanNumerals.fromRoman(date);
 	else if (dec_reg.test(date)) {
-		if (date >= 6000 || date < 0) res = "Wrong input!";
+		if (date >= 6000 || date <= 0) res = "Wrong input!";
 		else res = "Date in roman numerals:<br>" + RomanNumerals.toRoman(date);
 	} else res = "Wrong input!";
 	document.getElementById("response").innerHTML = res;
