@@ -8,8 +8,8 @@ html {
 }
 
 footer {
-	height: 20px;
-	line-height: 20px;
+	height: auto;
+	/*line-height: 20px;*/
 	position: absolute;
 	bottom: 0;
 }
