@@ -1,0 +1,118 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+	<title>Roman Numerals Conversion</title>
+	<meta name="description" content="Roman and numerals converter">
+	<meta name="author" content="Piotr Henczel">
+
+	<link rel="stylesheet" href="./style.css">
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 	<link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+	<header class="container-fluid bg-info">
+		<div class="row">
+			<div class="col-12 text-center text-white">
+				<h1>Roman numeral converter.</h1>
+			</div>
+		</div>
+	</header>
+	<main class="container-fluid" id="main">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-6">
+					<form>
+						<div class="form-group text-center">
+							<label for="data" class="mt-3 mb-1">Write roman numeral or decimal number date. (Less than 6000)</label>
+							<input type="text" class="form-control" id="date-data" placeholder="Write date here...">
+						</div>
+						<button type="button" class="btn btn-primary" onclick="convert()">Convert</button>
+					</form>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-6 my-3" id="response">
+					Your answer will display here.
+				</div>
+			</div>
+		</div>
+		<article class="container">
+		<hr/>
+		<h1>About roman numerals via wikipedia.</h1>
+		<p>Basic decimal pattern
+		The original pattern for Roman numerals used the symbols I, V, and X (1, 5, and 10) as simple tally marks. Each marker for 1 (I) added a unit value up to 5 (V), and was then added to (V) to make the numbers from 6 to 9:
+		<br />
+		I, II, III, IIII, V, VI, VII, VIII, VIIII, X.</p>
+
+		<p>The numerals for 4 (IIII) and 9 (VIIII) proved problematic (among other things, they are easily confused with III and VIII), and are generally replaced with IV (one less than 5) and IX (one less than 10). This feature of Roman numerals is called subtractive notation.</p>
+
+		<p>The numbers from 1 to 10 (including subtractive notation for 4 and 9) are expressed in Roman numerals as follows:
+		<br />
+		I, II, III, IV, V, VI, VII, VIII, IX, X.[2]
+		<br />
+		The system being basically decimal, tens and hundreds follow the same pattern:
+		<br />
+		Thus 10 to 100 (counting in tens, with X taking the place of I, L taking the place of V and C taking the place of X):
+		<br />
+		X, XX, XXX, XL, L, LX, LXX, LXXX, XC, C.
+		<br />
+		Note that 40 (XL) and 90 (XC) follow the same subtractive pattern as 4 and 9.</p>
+
+		<p>Similarly, 100 to 1000 (counting in hundreds):
+		<br />
+		C, CC, CCC, CD, D, DC, DCC, DCCC, CM, M.<br />
+		Again - 400 (CD) and 900 (CM) follow the standard subtractive pattern.</p>
+
+		<p>Many numbers include hundreds, units and tens. The Roman numeral system being basically decimal, each "place" is added in descending sequence from left to right, as with Arabic numerals. For example:
+		<br />
+		39 = "Thirty nine" (XXX+IX) = XXXIX.
+		<br />
+		246 = "Two hundred and forty six" (CC+XL+VI) = CCXLVI.</p>
+
+		<p>As each place has its own notation there is no need for place keeping zeros, so "missing places" are ignored, as in Latin (and English) speech, thus:
+		<br />
+		207 = "Two hundred and seven" (CC+VII) = CCVII
+		<br />
+		1066 = "A thousand and sixty six" (M+LX+VI) = MLXVI.
+		<br /></p>
+		<p>Roman numerals for large numbers are nowadays seen mainly in the form of year numbers (other uses are detailed later in this article), as in these examples:
+		<br />
+		1776 (M+DCC+LXX+VI) = MDCCLXXVI (the date written on the book held by the Statue of Liberty).
+		<br />
+		1954 (M+CM+L+IV) = MCMLIV (as in the trailer for the movie The Last Time I Saw Paris)
+		<br />
+		1990 (M+CM+XC) = MCMXC (used as the title of musical project Enigma's debut album MCMXC a.D., named after the year of its release).
+		<br />
+		2014 (MM+X+IV) = MMXIV (the year of the games of the XXII (22nd) Olympic Winter Games (in Sochi)
+		<br /></p>
+		<p>The current year (2018) is MMXVIII.</p>
+	</article>
+	</main>
+	
+	<footer class="container-fluid bg-warning text-center">
+  		Roman numeral converter by Piotr Henczel - 2018
+	</footer>
+
+	<script 
+		src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+		crossorigin="anonymous">
+	</script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+		crossorigin="anonymous">
+	</script>
+	<script 
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+		crossorigin="anonymous">
+	</script>
+	<script src="./app.js"></script>
+</body>
+</html>
